@@ -17,7 +17,7 @@
           }
           .hero-section {
               position: relative;
-              background: url('homepageimg.jpeg') no-repeat center center;
+              background: url('/static/homepageimg.jpeg') no-repeat center center;
               background-size: cover;
               height: 60vh;
           }
@@ -49,38 +49,37 @@
    <div class="container mx-auto px-6 py-8">
     <div class="flex justify-between items-center border-b-2 border-gray-300 pb-6">
      <!-- Left Section -->
-     <div class="flex space-x-4">
-      <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
-       CLOTHINGS
-      </a>
-      <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
-       RETAILERS
-      </a>
-      <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
-       ABOUT US
-      </a>
-     </div>
-     <!-- Middle Section (Logo) -->
-     <div class="logo-container">
-      <a href="#" class="text-3xl font-semibold">Should-I</a> <!-- Made text slightly bigger -->
-     </div>
-     <!-- Right Section -->
-     <div class="flex space-x-4">
-      <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
-       VIRTUAL CLOSET
-      </a>
-      <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
-       ACCOUNT
-      </a>
-      <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
-       <i class="fas fa-search">
-       </i>
-      </a>
-      <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
-       <i class="fas fa-shopping-cart">
-       </i>
-      </a>
-     </div>
+    <div class="flex space-x-4">
+        <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('clothing') }}">
+        CLOTHINGS
+        </a>
+        <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('retailers') }}">
+        RETAILERS
+        </a>
+        <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('about') }}">
+        ABOUT US
+        </a>
+    </div>
+    
+    <div class="logo-container">
+        <a href="{{ url_for('index') }}" class="text-3xl font-semibold">Should-I</a>
+    </div>
+    
+    <div class="flex space-x-4">
+        <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('virtual_closet') }}">
+        VIRTUAL CLOSET
+        </a>
+        <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('account') }}">
+        ACCOUNT
+        </a>
+        <!-- Search and Cart links remain the same -->
+        <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
+        <i class="fas fa-search"></i>
+        </a>
+        <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
+        <i class="fas fa-shopping-cart"></i>
+        </a>
+    </div>
     </div>
    <div class="hero-section">
       <div class="overlay"></div>

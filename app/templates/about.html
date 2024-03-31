@@ -21,42 +21,42 @@
    <div class="flex justify-between items-center border-b-2 border-gray-300 pb-6">
     <!-- Left Section -->
     <div class="flex space-x-4">
-     <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
-      CLOTHINGS
-     </a>
-     <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
-      RETAILERS
-     </a>
-     <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
-      ABOUT US
-     </a>
+        <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('clothing') }}">
+        CLOTHINGS
+        </a>
+        <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('retailers') }}">
+        RETAILERS
+        </a>
+        <a class="text-black hover:text-gray-700 text-sm font-semibold underline" href="{{ url_for('about') }}">
+        ABOUT US
+        </a>
     </div>
+    
     <div class="logo-container">
-     <a href="#" class="text-3xl font-semibold">Should-I</a>
+        <a href="{{ url_for('index') }}" class="text-3xl font-semibold">Should-I</a>
     </div>
-    <!-- Right Section -->
+    
     <div class="flex space-x-4">
-     <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
-      VIRTUAL CLOSET
-     </a>
-     <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
-      ACCOUNT
-     </a>
-     <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
-      <i class="fas fa-search">
-      </i>
-     </a>
-     <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
-      <i class="fas fa-shopping-cart">
-      </i>
-     </a>
+        <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('virtual_closet') }}">
+        VIRTUAL CLOSET
+        </a>
+        <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('account') }}">
+        ACCOUNT
+        </a>
+        <!-- Search and Cart links remain the same -->
+        <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
+        <i class="fas fa-search"></i>
+        </a>
+        <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
+        <i class="fas fa-shopping-cart"></i>
+        </a>
     </div>
    </div>
     <!-- About Us Section -->
     <div class="my-10">
         <h1 class="text-3xl font-bold text-center">About Should-I</h1>
         <p class="mt-6 text-lg text-gray-700">
-            Established in 2024, Should-I aims to bring locally-sourced, sustainable fashion items to your doorstep
+            Should-I (ชุด-ไอ) means my outfit in Thai. Established in 2024, Should-I aims to bring locally-sourced, sustainable fashion items to your doorstep.
         </p>
         <p class="mt-4 text-lg text-gray-700">
             Should-I was founded by El-Primo
