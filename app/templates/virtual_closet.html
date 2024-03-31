@@ -1,0 +1,43 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Dressing Room</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='css/virtual_closet.css') }}" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div id="app" class="flex">
+        <!-- Content populated by JavaScript -->
+    </div>
+
+    <script src="{{ url_for('static', filename='js/virtual_closet.js') }}"></script>
+</body>
+</html> {% endcomment %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Dressing Room</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+    <!-- Adjust the path to your CSS file -->
+    <link href="../static/css/virtual_closet.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div id="app" class="flex">
+        <!-- Content populated by JavaScript -->
+    </div>
+
+    <!-- Adjust the path to your JS file -->
+    <script src="../static/js/virtual_closet.js"></script>
+</body>
+</html>
+
