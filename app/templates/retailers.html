@@ -15,6 +15,31 @@
             padding: 0.5px 2px;
             border: 2px solid black;
         }
+        .image-600x600 {
+            display: block; /* Remove vertical space below the image */
+            max-width: 100%; /* Max width is 100% of the containing element */
+            height: auto; /* Height is auto to maintain aspect ratio */
+            object-fit: cover; /* Cover the area without stretching */
+        }
+        .image-wrapper {
+            position: relative;
+            width: 100%; /* Use the full width of the grid column */
+            padding-top: 100%; /* Top padding is 100% of the width, creating a square */
+            overflow: hidden; /* Ensures no part of the image spills out */
+        }
+        
+        .image-wrapper img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: auto;
+            height: 100%; /* Make the height of the image fill the container */
+            transform: translate(-50%, -50%);
+            min-width: 100%; /* Ensures the image covers the whole area */
+            min-height: 100%; /* Ensures the image covers the whole area */
+            max-width: none; /* Overrides any max-width */
+            object-fit: cover; /* Ensures the image covers the area */
+        }
         </style>
     </head>
     <body class="bg-gray-100">
@@ -69,91 +94,77 @@
     <div class="flex flex-wrap -mx-4">
     <!-- Product 1 -->
     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-    <img alt="8th St by Ronnie Fieg for Clarks Originals Spring 2024, shoes on a wooden chair" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-vJN86i5a2d4WBnmKl8ziR7UH.png?st=2024-03-30T23%3A56%3A06Z&amp;se=2024-03-31T01%3A56%3A06Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-31T00%3A10%3A13Z&amp;ske=2024-04-01T00%3A10%3A13Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=szOxNwL7OoGNWpQMgtB5SaagWW4e8bLp0txp/p7wdlY%3D" width="600"/>
-    <h3 class="text-sm font-semibold mt-1">
-    8th St by Ronnie Fieg for Clarks Originals Spring 2024
-    </h3>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/retailer1.jpg') }}"/>
+        </div>
+        <h3 class="text-sm font-semibold mt-1">
+            Nusara
+        </h3>
     </div>
     <!-- Product 2 -->
     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-    <img alt="Kith for New York Botanical Garden, floral jacket" class="w-full h-auto" src="https://placehold.co/600x600"/>
-    <h3 class="text-sm font-semibold mt-1">
-    Kith for New York Botanical Garden
-    </h3>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/retailer2.jpg') }}"/>
+        </div>
+        <h3 class="text-sm font-semibold mt-1">
+            Gemini
+        </h3>
     </div>
     <!-- Product 3 -->
     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-    <img alt="Kith Kids Spring Active 2024 Campaign, kids in sportswear" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-tqoi6YQTzWTkmqRRcrlsqiFn.png?st=2024-03-30T23%3A56%3A10Z&amp;se=2024-03-31T01%3A56%3A10Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-30T01%3A57%3A08Z&amp;ske=2024-03-31T01%3A57%3A08Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=j/9SBlXV82dJcoPYsTxskFvKgMGjF%2BgEQQmgldiF/t0%3D" width="600"/>
-    <h3 class="text-sm font-semibold mt-1">
-    Kith Kids Spring Active 2024 Campaign
-    </h3>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/retailer3.jpg') }}"/>
+        </div>
+        <h3 class="text-sm font-semibold mt-1">
+            SuerPar
+        </h3>
     </div>
     <!-- Product 4 -->
     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-    <img alt="A Closer Look at Kith Spring 2024 Delivery II, various clothing items" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-rNpHMi6BJNJFwB8knwmy6EOD.png?st=2024-03-30T23%3A56%3A08Z&amp;se=2024-03-31T01%3A56%3A08Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-31T00%3A11%3A18Z&amp;ske=2024-04-01T00%3A11%3A18Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=2UxK7E8c69nePe4H1JvDhO5rbXf9YlZ9CzdcN27KQno%3D" width="600"/>
-    <h3 class="text-sm font-semibold mt-1">
-    A Closer Look at Kith Spring 2024 Delivery II
-    </h3>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/retailer4.jpg') }}"/>
+        </div>
+        <h3 class="text-sm font-semibold mt-1">
+            Luxe
+        </h3>
+    </div>
     </div>
     <div class="flex flex-wrap -mx-4">
     <!-- Product 1 -->
     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-    <img alt="8th St by Ronnie Fieg for Clarks Originals Spring 2024, shoes on a wooden chair" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-vJN86i5a2d4WBnmKl8ziR7UH.png?st=2024-03-30T23%3A56%3A06Z&amp;se=2024-03-31T01%3A56%3A06Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-31T00%3A10%3A13Z&amp;ske=2024-04-01T00%3A10%3A13Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=szOxNwL7OoGNWpQMgtB5SaagWW4e8bLp0txp/p7wdlY%3D" width="600"/>
-    <h3 class="text-sm font-semibold mt-1">
-    8th St by Ronnie Fieg for Clarks Originals Spring 2024
-    </h3>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/retailer5.jpg') }}"/>
+        </div>
+        <h3 class="text-sm font-semibold mt-1">
+            Mae Manee
+        </h3>
     </div>
     <!-- Product 2 -->
     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-    <img alt="Kith for New York Botanical Garden, floral jacket" class="w-full h-auto" src="https://placehold.co/600x600"/>
-    <h3 class="text-sm font-semibold mt-1">
-    Kith for New York Botanical Garden
-    </h3>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/retailer6.jpg') }}"/>
+        </div>
+        <h3 class="text-sm font-semibold mt-1">
+            AmFineBKK
+        </h3>
     </div>
     <!-- Product 3 -->
     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-    <img alt="Kith Kids Spring Active 2024 Campaign, kids in sportswear" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-tqoi6YQTzWTkmqRRcrlsqiFn.png?st=2024-03-30T23%3A56%3A10Z&amp;se=2024-03-31T01%3A56%3A10Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-30T01%3A57%3A08Z&amp;ske=2024-03-31T01%3A57%3A08Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=j/9SBlXV82dJcoPYsTxskFvKgMGjF%2BgEQQmgldiF/t0%3D" width="600"/>
-    <h3 class="text-sm font-semibold mt-1">
-    Kith Kids Spring Active 2024 Campaign
-    </h3>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/comingsoon.jpeg') }}"/>
+        </div>
+        <h3 class="text-sm font-semibold mt-1">
+            Coming Soon
+        </h3>
     </div>
     <!-- Product 4 -->
     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-    <img alt="A Closer Look at Kith Spring 2024 Delivery II, various clothing items" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-rNpHMi6BJNJFwB8knwmy6EOD.png?st=2024-03-30T23%3A56%3A08Z&amp;se=2024-03-31T01%3A56%3A08Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-31T00%3A11%3A18Z&amp;ske=2024-04-01T00%3A11%3A18Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=2UxK7E8c69nePe4H1JvDhO5rbXf9YlZ9CzdcN27KQno%3D" width="600"/>
-    <h3 class="text-sm font-semibold mt-1">
-    A Closer Look at Kith Spring 2024 Delivery II
-    </h3>
-    </div>
-    <div class="flex flex-wrap -mx-4">
-    <!-- Product 1 -->
-    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-    <img alt="8th St by Ronnie Fieg for Clarks Originals Spring 2024, shoes on a wooden chair" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-vJN86i5a2d4WBnmKl8ziR7UH.png?st=2024-03-30T23%3A56%3A06Z&amp;se=2024-03-31T01%3A56%3A06Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-31T00%3A10%3A13Z&amp;ske=2024-04-01T00%3A10%3A13Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=szOxNwL7OoGNWpQMgtB5SaagWW4e8bLp0txp/p7wdlY%3D" width="600"/>
-    <h3 class="text-sm font-semibold mt-1">
-    8th St by Ronnie Fieg for Clarks Originals Spring 2024
-    </h3>
-    </div>
-    <!-- Product 2 -->
-    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-    <img alt="Kith for New York Botanical Garden, floral jacket" class="w-full h-auto" src="https://placehold.co/600x600"/>
-    <h3 class="text-sm font-semibold mt-1">
-    Kith for New York Botanical Garden
-    </h3>
-    </div>
-    <!-- Product 3 -->
-    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-    <img alt="Kith Kids Spring Active 2024 Campaign, kids in sportswear" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-tqoi6YQTzWTkmqRRcrlsqiFn.png?st=2024-03-30T23%3A56%3A10Z&amp;se=2024-03-31T01%3A56%3A10Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-30T01%3A57%3A08Z&amp;ske=2024-03-31T01%3A57%3A08Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=j/9SBlXV82dJcoPYsTxskFvKgMGjF%2BgEQQmgldiF/t0%3D" width="600"/>
-    <h3 class="text-sm font-semibold mt-1">
-    Kith Kids Spring Active 2024 Campaign
-    </h3>
-    </div>
-    <!-- Product 4 -->
-    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-    <img alt="A Closer Look at Kith Spring 2024 Delivery II, various clothing items" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-rNpHMi6BJNJFwB8knwmy6EOD.png?st=2024-03-30T23%3A56%3A08Z&amp;se=2024-03-31T01%3A56%3A08Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-31T00%3A11%3A18Z&amp;ske=2024-04-01T00%3A11%3A18Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=2UxK7E8c69nePe4H1JvDhO5rbXf9YlZ9CzdcN27KQno%3D" width="600"/>
-    <h3 class="text-sm font-semibold mt-1">
-    A Closer Look at Kith Spring 2024 Delivery II
-    </h3>
-    </div>
-    <!-- Repeat for other products as needed -->
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/comingsoon.jpeg') }}"/>
+        </div>
+        <h3 class="text-sm font-semibold mt-1">
+            Coming Soon
+        </h3>
     </div>
 </div>
 </main>
