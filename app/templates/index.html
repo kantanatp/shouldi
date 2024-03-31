@@ -42,8 +42,27 @@
               width: 100%;
               max-width: none;
           }
+          .image-wrapper {
+            position: relative;
+            width: 100%; /* Use the full width of the grid column */
+            padding-top: 100%; /* Top padding is 100% of the width, creating a square */
+            overflow: hidden; /* Ensures no part of the image spills out */
+        }
+        
+        .image-wrapper img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: auto;
+            height: 100%; /* Make the height of the image fill the container */
+            transform: translate(-50%, -50%);
+            min-width: 100%; /* Ensures the image covers the whole area */
+            min-height: 100%; /* Ensures the image covers the whole area */
+            max-width: none; /* Overrides any max-width */
+            object-fit: cover; /* Ensures the image covers the area */
+        }
       </style>
-      <title>Kith for New York Botanical Garden</title>
+      <title>Shoud-I Bangkok</title>
   </head>
   <body class="bg-gray-100">
    <div class="container mx-auto px-6 py-8">
