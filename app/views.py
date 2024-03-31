@@ -1,6 +1,6 @@
-from . import app, db
+from . import app#, db
 from flask import render_template, request, redirect, url_for, flash, jsonify
-from .models import Product, Retailer, User
+# from .models import Product, Retailer, User
 
 @app.route('/')
 def index():
@@ -26,3 +26,6 @@ def virtual_closet():
 def account():
     return render_template('account.html')
 
+@app.route('/item')
+def item():
+    return render_template('item.html')
