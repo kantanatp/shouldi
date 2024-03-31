@@ -1,0 +1,161 @@
+<html lang="en">
+    <html>
+    <head>
+        <script src="https://cdn.tailwindcss.com">
+        </script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        .logo-container {
+            font-family: 'Roboto Mono', monospace;
+            padding: 0.5px 2px;
+            border: 2px solid black;
+        }
+        </style>
+    </head>
+    <body class="bg-gray-100">
+        <div class="container mx-auto px-6 py-8">
+        <div class="flex justify-between items-center border-b-2 border-gray-300 pb-6">
+        <!-- Left Section -->
+        <div class="flex space-x-4">
+            <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('clothing') }}">
+            CLOTHINGS
+            </a>
+            <a class="text-black hover:text-gray-700 text-sm font-semibold underline" href="{{ url_for('retailers') }}">
+            RETAILERS
+            </a>
+            <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('about') }}">
+            ABOUT US
+            </a>
+        </div>
+        
+        <div class="logo-container">
+            <a href="{{ url_for('index') }}" class="text-3xl font-semibold">Should-I</a>
+        </div>
+        
+        <div class="flex space-x-4">
+            <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('virtual_closet') }}">
+            VIRTUAL CLOSET
+            </a>
+            <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('account') }}">
+            ACCOUNT
+            </a>
+            <!-- Search and Cart links remain the same -->
+            <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
+            <i class="fas fa-search"></i>
+            </a>
+            <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
+            <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
+        </div>
+    </div>
+</nav>
+</header>
+<div class="text-center mt-2 mb-10">
+    <h1 class="text-5xl font-semibold">
+        Brands at Should-I
+    </h1>
+    <p class="text-sm text-gray-600 mt-4 px-6">
+        Explore the brands we have at Should-I. All locally-sourced. All sustainable.
+    </p>
+</div>
+<main class="my-8">
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div class="flex flex-wrap -mx-4">
+    <!-- Product 1 -->
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+    <img alt="8th St by Ronnie Fieg for Clarks Originals Spring 2024, shoes on a wooden chair" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-vJN86i5a2d4WBnmKl8ziR7UH.png?st=2024-03-30T23%3A56%3A06Z&amp;se=2024-03-31T01%3A56%3A06Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-31T00%3A10%3A13Z&amp;ske=2024-04-01T00%3A10%3A13Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=szOxNwL7OoGNWpQMgtB5SaagWW4e8bLp0txp/p7wdlY%3D" width="600"/>
+    <h3 class="text-sm font-semibold mt-1">
+    8th St by Ronnie Fieg for Clarks Originals Spring 2024
+    </h3>
+    </div>
+    <!-- Product 2 -->
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+    <img alt="Kith for New York Botanical Garden, floral jacket" class="w-full h-auto" src="https://placehold.co/600x600"/>
+    <h3 class="text-sm font-semibold mt-1">
+    Kith for New York Botanical Garden
+    </h3>
+    </div>
+    <!-- Product 3 -->
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+    <img alt="Kith Kids Spring Active 2024 Campaign, kids in sportswear" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-tqoi6YQTzWTkmqRRcrlsqiFn.png?st=2024-03-30T23%3A56%3A10Z&amp;se=2024-03-31T01%3A56%3A10Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-30T01%3A57%3A08Z&amp;ske=2024-03-31T01%3A57%3A08Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=j/9SBlXV82dJcoPYsTxskFvKgMGjF%2BgEQQmgldiF/t0%3D" width="600"/>
+    <h3 class="text-sm font-semibold mt-1">
+    Kith Kids Spring Active 2024 Campaign
+    </h3>
+    </div>
+    <!-- Product 4 -->
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+    <img alt="A Closer Look at Kith Spring 2024 Delivery II, various clothing items" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-rNpHMi6BJNJFwB8knwmy6EOD.png?st=2024-03-30T23%3A56%3A08Z&amp;se=2024-03-31T01%3A56%3A08Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-31T00%3A11%3A18Z&amp;ske=2024-04-01T00%3A11%3A18Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=2UxK7E8c69nePe4H1JvDhO5rbXf9YlZ9CzdcN27KQno%3D" width="600"/>
+    <h3 class="text-sm font-semibold mt-1">
+    A Closer Look at Kith Spring 2024 Delivery II
+    </h3>
+    </div>
+    <div class="flex flex-wrap -mx-4">
+    <!-- Product 1 -->
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+    <img alt="8th St by Ronnie Fieg for Clarks Originals Spring 2024, shoes on a wooden chair" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-vJN86i5a2d4WBnmKl8ziR7UH.png?st=2024-03-30T23%3A56%3A06Z&amp;se=2024-03-31T01%3A56%3A06Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-31T00%3A10%3A13Z&amp;ske=2024-04-01T00%3A10%3A13Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=szOxNwL7OoGNWpQMgtB5SaagWW4e8bLp0txp/p7wdlY%3D" width="600"/>
+    <h3 class="text-sm font-semibold mt-1">
+    8th St by Ronnie Fieg for Clarks Originals Spring 2024
+    </h3>
+    </div>
+    <!-- Product 2 -->
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+    <img alt="Kith for New York Botanical Garden, floral jacket" class="w-full h-auto" src="https://placehold.co/600x600"/>
+    <h3 class="text-sm font-semibold mt-1">
+    Kith for New York Botanical Garden
+    </h3>
+    </div>
+    <!-- Product 3 -->
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+    <img alt="Kith Kids Spring Active 2024 Campaign, kids in sportswear" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-tqoi6YQTzWTkmqRRcrlsqiFn.png?st=2024-03-30T23%3A56%3A10Z&amp;se=2024-03-31T01%3A56%3A10Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-30T01%3A57%3A08Z&amp;ske=2024-03-31T01%3A57%3A08Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=j/9SBlXV82dJcoPYsTxskFvKgMGjF%2BgEQQmgldiF/t0%3D" width="600"/>
+    <h3 class="text-sm font-semibold mt-1">
+    Kith Kids Spring Active 2024 Campaign
+    </h3>
+    </div>
+    <!-- Product 4 -->
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+    <img alt="A Closer Look at Kith Spring 2024 Delivery II, various clothing items" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-rNpHMi6BJNJFwB8knwmy6EOD.png?st=2024-03-30T23%3A56%3A08Z&amp;se=2024-03-31T01%3A56%3A08Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-31T00%3A11%3A18Z&amp;ske=2024-04-01T00%3A11%3A18Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=2UxK7E8c69nePe4H1JvDhO5rbXf9YlZ9CzdcN27KQno%3D" width="600"/>
+    <h3 class="text-sm font-semibold mt-1">
+    A Closer Look at Kith Spring 2024 Delivery II
+    </h3>
+    </div>
+    <div class="flex flex-wrap -mx-4">
+    <!-- Product 1 -->
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+    <img alt="8th St by Ronnie Fieg for Clarks Originals Spring 2024, shoes on a wooden chair" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-vJN86i5a2d4WBnmKl8ziR7UH.png?st=2024-03-30T23%3A56%3A06Z&amp;se=2024-03-31T01%3A56%3A06Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-31T00%3A10%3A13Z&amp;ske=2024-04-01T00%3A10%3A13Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=szOxNwL7OoGNWpQMgtB5SaagWW4e8bLp0txp/p7wdlY%3D" width="600"/>
+    <h3 class="text-sm font-semibold mt-1">
+    8th St by Ronnie Fieg for Clarks Originals Spring 2024
+    </h3>
+    </div>
+    <!-- Product 2 -->
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+    <img alt="Kith for New York Botanical Garden, floral jacket" class="w-full h-auto" src="https://placehold.co/600x600"/>
+    <h3 class="text-sm font-semibold mt-1">
+    Kith for New York Botanical Garden
+    </h3>
+    </div>
+    <!-- Product 3 -->
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+    <img alt="Kith Kids Spring Active 2024 Campaign, kids in sportswear" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-tqoi6YQTzWTkmqRRcrlsqiFn.png?st=2024-03-30T23%3A56%3A10Z&amp;se=2024-03-31T01%3A56%3A10Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-30T01%3A57%3A08Z&amp;ske=2024-03-31T01%3A57%3A08Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=j/9SBlXV82dJcoPYsTxskFvKgMGjF%2BgEQQmgldiF/t0%3D" width="600"/>
+    <h3 class="text-sm font-semibold mt-1">
+    Kith Kids Spring Active 2024 Campaign
+    </h3>
+    </div>
+    <!-- Product 4 -->
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+    <img alt="A Closer Look at Kith Spring 2024 Delivery II, various clothing items" class="w-full h-auto" height="600" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-00NuF2yeTFDmCBFPMBzzh75g/user-vMmisjelFFvvHACcGCcoDJbh/img-rNpHMi6BJNJFwB8knwmy6EOD.png?st=2024-03-30T23%3A56%3A08Z&amp;se=2024-03-31T01%3A56%3A08Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-03-31T00%3A11%3A18Z&amp;ske=2024-04-01T00%3A11%3A18Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=2UxK7E8c69nePe4H1JvDhO5rbXf9YlZ9CzdcN27KQno%3D" width="600"/>
+    <h3 class="text-sm font-semibold mt-1">
+    A Closer Look at Kith Spring 2024 Delivery II
+    </h3>
+    </div>
+    <!-- Repeat for other products as needed -->
+    </div>
+</div>
+</main>
+</body>
+</html>

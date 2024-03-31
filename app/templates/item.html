@@ -1,0 +1,157 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        .logo-container {
+            font-family: 'Roboto Mono', monospace;
+            padding: 0.5px 2px;
+            border: 2px solid black;
+        }
+        .container {
+            width: 100%;
+            max-width: none;
+        }
+        /* The following are new or updated styles */
+        .product-image {
+            max-width: 50%;
+        }
+        .product-details {
+            max-width: 50%;
+            padding-left: 3rem; /* Adjust as needed */
+        }
+        .size-box {
+            padding: 0.5rem;
+            border: 1px solid black;
+            display: inline-block;
+            margin-right: 0.5rem;
+            cursor: pointer;
+        }
+        .size-box.selected {
+            background-color: black;
+            color: white;
+        }
+        /* Add responsiveness if needed */
+        @media (max-width: 1024px) {
+            .product-image,
+            .product-details {
+                max-width: 100%;
+            }
+            .product-details {
+                padding-left: 0;
+            }
+        }
+    </style>
+    <title>Kith for New York Botanical Garden</title>
+</head>
+<body class="bg-gray-100">
+<div class="container mx-auto px-6 py-8">
+<div class="flex justify-between items-center border-b-2 border-gray-300 pb-6">
+    <!-- Left Section -->
+<div class="flex space-x-4">
+    <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('clothing') }}">
+    CLOTHINGS
+    </a>
+    <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('retailers') }}">
+    RETAILERS
+    </a>
+    <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('about') }}">
+    ABOUT US
+    </a>
+</div>
+
+<div class="logo-container">
+    <a href="{{ url_for('index') }}" class="text-3xl font-semibold">Should-I</a>
+</div>
+
+<div class="flex space-x-4">
+    <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('virtual_closet') }}">
+    VIRTUAL CLOSET
+    </a>
+    <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('account') }}">
+    ACCOUNT
+    </a>
+    <!-- Search and Cart links remain the same -->
+    <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
+    <i class="fas fa-search"></i>
+    </a>
+    <a class="text-black hover:text-gray-700 text-sm font-semibold" href="#">
+    <i class="fas fa-shopping-cart"></i>
+    </a>
+</div>
+</div>
+<div class="flex flex-wrap lg:flex-nowrap justify-between items-start lg:items-center mt-12">
+    <div class="product-image">
+        <img alt="White t-shirt on a hanger with 'Gardens of the Mind' floral print" class="w-full h-auto" src="your_image_url" />
+    </div>
+    <div class="product-details">
+        <h1 class="text-3xl font-semibold mb-2">
+            Kith for New York Botanical Garden Le Sene Du Perou Vintage Tee
+        </h1>
+        <p class="text-xl font-semibold mb-6">
+            $70.00
+        </p>
+        <!-- Color and Size options would remain the same -->
+        <div class="mb-4">
+            <!-- Sizes -->
+            <div class="flex items-center space-x-2">
+                <div class="size-box">XS</div>
+                <div class="size-box">S</div>
+                <div class="size-box">M</div>
+                <div class="size-box">L</div>
+                <div class="size-box">XL</div>
+                <div class="size-box">XXL</div>
+            </div>
+        </div>
+        <button class="bg-black text-white px-4 py-2 mb-6">
+            SELECT A SIZE
+        </button>
+        <p class="text-red-600 uppercase text-sm mb-6">
+            Final sale. No returns or exchanges
+        </p>
+        <h3 class="text-xl font-semibold mb-2">
+            Details
+        </h3>
+    <ul class="text-gray-700 list-disc pl-5 mb-6">
+    <li>
+    230GSM cotton jersey fabric
+    </li>
+    <li>
+    Vintage-washed
+    </li>
+    <li>
+    Ribbed neckline
+    </li>
+    <li>
+    Artwork printed on the front chest
+    </li>
+    <li>
+    Machine wash inside out
+    </li>
+    <li>
+    Wash with like colors
+    </li>
+    </ul>
+    <div class="text-gray-700">
+    <p>
+    Style: khm032113-101
+    </p>
+    <p>
+    Color: White
+    </p>
+    <p>
+    Material: 100% Cotton
+    </p>
+    </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
