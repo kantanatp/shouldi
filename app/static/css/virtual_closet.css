@@ -1,22 +1,95 @@
-/* Model Display */
-.h-screen {
-    /* Full height */
-    background-color: #f3f3f3; /* Placeholder background */
-    /* Add more styling as needed */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Change background to white */
 }
 
-/* Button styles */
-.border {
-    border-width: 1px;
-    /* Add more button styling as needed */
+.logo-container {
+    font-family: 'Roboto Mono', monospace; /* Sets the font for the logo */
+    padding: 0.5px 2px; /* Adjust padding as needed */
+    border: 2px solid black; /* Adds a border around the logo */
+    display: inline-block; /* Makes the container fit the content */
+    margin: 0 auto; /* Centers the logo container if within a flex container */
 }
 
-/* Custom styles for the virtual dressing room */
+.navbar {
+    position: fixed; /* Keep navbar at the top */
+    top: 0; /* Align navbar to the top edge of the viewport */
+    left: 0; /* Align navbar to the left edge of the viewport */
+    width: 100%; /* Make navbar span the full width */
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+#app {
+    padding-top: 110px; /* Adjust this value based on the actual height of your navbar */
+}
+
+.container {
+    position: fixed; /* Keep the navbar fixed at the top */
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Align to the left of the viewport */
+    right: 0; /* Ensure it spans the full width */
+    z-index: 10; /* Ensure it stays above other content */
+    background: #fff; /* Ensure the background is not transparent */
+}
+
+#leftSide {
+    position: fixed;
+    top: 100px; /* Adjust this value to align it right below the navbar */
+    left: 0;
+    width: 45%; /* Reduced from 50% to 45% to shrink its width */
+    height: calc(100vh - 64px); /* Adjust the height based on the navbar height */
+    overflow-y: auto; /* Enables scrolling for the left side content */
+    z-index: 5; /* Ensure it's above the page background but below modal/pop-up elements if any */
+    padding: 0 20px; /* Add padding inside the left side for content spacing */
+    box-sizing: border-box; /* Ensures padding doesn't add to the total width */
+    margin-left: 20px; /* Adds margin to the left side, creating space around the content */
+}
+
+#leftSide img {
+    max-width: 80%; /* Adjust the width to your preference */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Ensures the image is a block-level element */
+    margin: 0 auto; /* Centers the image within the #leftSide */
+}
+
+
+#rightSide {
+    position: absolute; /* Relative to the nearest positioned ancestor */
+    top: 0;
+    right: 0;
+    width: 50%; /* Or adjust based on your layout */
+    height: 100%; /* Take up all available height */
+    overflow-y: auto; /* Add scroll to the right side */
+    padding-top: 100px; /* Adjust based on the navbar's height */
+}
+
+
+.model-image {
+    max-height: 100vh;
+    width: 70vh;
+    display: block;
+    margin: 0 auto;
+}
+
 .product-card {
+    position: relative; /* To position the sustainable banner */
     background-color: #f3f3f3;
     padding: 1rem;
     border-radius: 8px;
     text-align: center;
+}
+
+.sustainable-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: green;
+    color: white;
+    padding: 2px 5px;
+    font-size: 12px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .product-image {
@@ -45,3 +118,27 @@
     cursor: pointer;
 }
 
+.filter-btn {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #dcdcdc;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background-color: black;
+    color: white;
+}
+
+.product-card.selected {
+    outline: 2px solid green;
+    outline-offset: -2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* This creates a responsive grid */
+    gap: 1rem; /* Adjust the gap between items */
+    justify-items: center; /* Center items horizontally */
+}
