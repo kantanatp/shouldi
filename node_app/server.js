@@ -58,11 +58,11 @@ function httpsPost({hostname, path, headers, body}) {
 // Authentication function
 function getAuthenticationHeader(json = false) {
     let time = parseInt(Date.now() / 1000);
-    let derivedKey = pbkdf2.pbkdf2Sync('663a916f8e20d5733e86caee497863ea', time.toString(), 128, 32, 'sha256'); // private key
+    let derivedKey = pbkdf2.pbkdf2Sync('90831870b3da1849a6fdf475fb981a75', time.toString(), 128, 32, 'sha256'); // private key
     derivedKey = derivedKey.toString('hex');
 
     const headers = {
-        "public_key": "80e3592e14bc363029a86cbf670a2671", // public key
+        "public_key": "cff448bdc1460c09fb3ad45db69be64c", // public key
         "one_time_code": derivedKey,
         "timestamp": time.toString(),
     };
