@@ -1,6 +1,6 @@
 from . import app, db
 from flask import render_template, request, redirect, url_for, flash, jsonify
-from .models import Product, Retailer, User, VirtualCloset
+from .models import Product, Retailer, User
 
 @app.route('/')
 def index():
