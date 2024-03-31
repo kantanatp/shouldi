@@ -1,5 +1,6 @@
 <html>
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -49,14 +50,14 @@
             }
         }
     </style>
-    <title>Kith for New York Botanical Garden</title>
+    <title>Should-I Bangkok</title>
 </head>
 <body class="bg-gray-100">
 <div class="container mx-auto px-6 py-8">
 <div class="flex justify-between items-center border-b-2 border-gray-300 pb-6">
     <!-- Left Section -->
 <div class="flex space-x-4">
-    <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('clothing') }}">
+    <a class="text-black hover:text-gray-700 text-sm font-semibold underline" href="{{ url_for('clothing') }}">
     CLOTHINGS
     </a>
     <a class="text-black hover:text-gray-700 text-sm font-semibold" href="{{ url_for('retailers') }}">
@@ -87,71 +88,50 @@
     </a>
 </div>
 </div>
-<div class="flex flex-wrap lg:flex-nowrap justify-between items-start lg:items-center mt-12">
-    <div class="product-image">
-        <img alt="White t-shirt on a hanger with 'Gardens of the Mind' floral print" class="w-full h-auto" src="your_image_url" />
-    </div>
-    <div class="product-details">
-        <h1 class="text-3xl font-semibold mb-2">
-            Kith for New York Botanical Garden Le Sene Du Perou Vintage Tee
-        </h1>
-        <p class="text-xl font-semibold mb-6">
-            $70.00
-        </p>
-        <!-- Color and Size options would remain the same -->
-        <div class="mb-4">
-            <!-- Sizes -->
-            <div class="flex items-center space-x-2">
-                <div class="size-box">XS</div>
-                <div class="size-box">S</div>
-                <div class="size-box">M</div>
-                <div class="size-box">L</div>
-                <div class="size-box">XL</div>
-                <div class="size-box">XXL</div>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-6 py-8">
+        <div class="flex flex-col lg:flex-row justify-between mt-12">
+            <div class="product-image lg:w-1/2">
+                <!-- Image will be inserted by JavaScript -->
+                <img src="" alt="Product Image" id="productImage">
             </div>
-        </div>
+            <div class="product-details lg:w-1/2 lg:pl-12">
+                <h1 id="productName" class="text-3xl font-semibold mb-2">
+                    <!-- Product Name -->
+                </h1>
+                <p id="productPrice" class="text-xl font-semibold mb-6">
+                    <!-- Product Price -->
+                </p>
+                <!-- Color and Size Options -->
+                <!-- Sizes -->
+                <div class="mb-4">
+                    <span class="text-gray-700">Size</span>
+                    <div class="flex mt-2">
+                        <div class="size-box">XS</div>
+                        <div class="size-box">S</div>
+                        <div class="size-box">M</div>
+                        <div class="size-box">L</div>
+                        <div class="size-box">XL</div>
+                        <div class="size-box">XXL</div>
+                    </div>
+                </div>
         <button class="bg-black text-white px-4 py-2 mb-6">
             SELECT A SIZE
         </button>
         <p class="text-red-600 uppercase text-sm mb-6">
-            Final sale. No returns or exchanges
+            All products are locally-sourced from Thailand
         </p>
         <h3 class="text-xl font-semibold mb-2">
             Details
         </h3>
     <ul class="text-gray-700 list-disc pl-5 mb-6">
-    <li>
-    230GSM cotton jersey fabric
-    </li>
-    <li>
-    Vintage-washed
-    </li>
-    <li>
-    Ribbed neckline
-    </li>
-    <li>
-    Artwork printed on the front chest
-    </li>
-    <li>
-    Machine wash inside out
-    </li>
-    <li>
-    Wash with like colors
-    </li>
-    </ul>
-    <div class="text-gray-700">
-    <p>
-    Style: khm032113-101
-    </p>
-    <p>
-    Color: White
-    </p>
-    <p>
-    Material: 100% Cotton
-    </p>
+        <div id="productDetails" class="text-gray-700">
+            <!-- Details goes here -->
+        </div>
     </div>
     </div>
 </div>
 </div>
+<script src="{{ url_for('static', filename='js/item.js') }}"></script>
 </body>
 </html>

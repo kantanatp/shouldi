@@ -5,6 +5,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
   <style>
    body {
       font-family: 'Open Sans', sans-serif;
@@ -33,6 +34,15 @@
       max-width: none; /* Overrides any max-width */
       object-fit: cover; /* Ensures the image covers the area */
   }
+  .sustainable-icon {
+      position: absolute;
+      top: 0.5rem; /* Adjust the position as needed */
+      left: 0.5rem; /* Adjust the position as needed */
+      z-index: 10; /* Make sure the icon is above the image */
+    }
+    .hidden {
+      display: none;
+    }
   </style>
  </head>
  <body class="bg-gray-100">
@@ -96,204 +106,405 @@
 
    <div class="grid grid-cols-3 gap-6 mb-10">
     <!-- Product 1 -->
+    <div id="top1" class="bg-white shadow rounded overflow-hidden group" onclick="selectProduct('top1')">
     <div class="bg-white shadow rounded overflow-hidden group">
      <div class="bg-gray-200 relative">
       <div class="image-wrapper">
+            <div id="icon_sustainable_top1" class="sustainable-icon hidden">
+                  <i class="fas fa-leaf text-green-500"></i>
+            </div>
             <img src="{{ url_for('static', filename='images/top1.jpeg') }}"/>
         </div>
      </div>
      <div class="p-4 flex flex-col">
-      <h3 class="font-semibold text-lg leading-tight truncate">
-       Should-I Gayac Williams III Hoodie Kindling
+      <h3 id="name_top1" class="font-semibold text-lg leading-tight truncate">
+        <!-- Product Name will be inserted here -->
       </h3>
-      <p class="mt-1 text-gray-500 text-sm">
-       $225.00
+      <p id="price_top1" class="mt-1 text-gray-500 text-sm">
+        <!-- Product Price will be inserted here -->
       </p>
-     </div>
+    </div>
+    </div>
     </div>
     <!-- Product 2 -->
+    <div id="top2" class="bg-white shadow rounded overflow-hidden group" onclick="selectProduct('top2')">
     <div class="bg-white shadow rounded overflow-hidden group">
      <div class="bg-gray-200 relative">
       <div class="image-wrapper">
+            <div id="icon_sustainable_top2" class="sustainable-icon hidden">
+                  <i class="fas fa-leaf text-green-500"></i>
+            </div>
             <img src="{{ url_for('static', filename='images/top2.jpeg') }}"/>
         </div>
      </div>
      <div class="p-4 flex flex-col">
-      <h3 class="font-semibold text-lg leading-tight truncate">
-       Should-I La Casse Williams III Hoodie Nocturnal
+      <h3 id="name_top2" class="font-semibold text-lg leading-tight truncate">
+        <!-- Product Name will be inserted here -->
       </h3>
-      <p class="mt-1 text-gray-500 text-sm">
-       $225.00
+      <p id="price_top2" class="mt-1 text-gray-500 text-sm">
+        <!-- Product Price will be inserted here -->
       </p>
-     </div>
+    </div>
+    </div>
     </div>
     <!-- Product 3 -->
+    <div id="top3" class="bg-white shadow rounded overflow-hidden group" onclick="selectProduct('top3')">
     <div class="bg-white shadow rounded overflow-hidden group">
      <div class="bg-gray-200 relative">
       <div class="image-wrapper">
+            <div id="icon_sustainable_top3" class="sustainable-icon hidden">
+                  <i class="fas fa-leaf text-green-500"></i>
+            </div>
             <img src="{{ url_for('static', filename='images/top3.jpeg') }}"/>
         </div>
      </div>
      <div class="p-4 flex flex-col">
-      <h3 class="font-semibold text-lg leading-tight truncate">
-       Should-I Logo Nelson Crewneck Light Heather Grey
+      <h3 id="name_top3" class="font-semibold text-lg leading-tight truncate">
+        <!-- Product Name will be inserted here -->
       </h3>
-      <p class="mt-1 text-gray-500 text-sm">
-       $175.00
+      <p id="price_top3" class="mt-1 text-gray-500 text-sm">
+        <!-- Product Price will be inserted here -->
       </p>
-     </div>
     </div>
+    </div>
+   </div>
    </div>
    <div class="grid grid-cols-3 gap-6 mb-10">
       <!-- Product 4 -->
+      <div id="top4" class="bg-white shadow rounded overflow-hidden group" onclick="selectProduct('top4')">
       <div class="bg-white shadow rounded overflow-hidden group">
        <div class="bg-gray-200 relative">
         <div class="image-wrapper">
+            <div id="icon_sustainable_top4" class="sustainable-icon hidden">
+                  <i class="fas fa-leaf text-green-500"></i>
+            </div>
               <img src="{{ url_for('static', filename='images/top4.jpeg') }}"/>
           </div>
        </div>
        <div class="p-4 flex flex-col">
-        <h3 class="font-semibold text-lg leading-tight truncate">
-         Should-I Gayac Williams III Hoodie Kindling
-        </h3>
-        <p class="mt-1 text-gray-500 text-sm">
-         $225.00
-        </p>
-       </div>
+            <h3 id="name_top4" class="font-semibold text-lg leading-tight truncate">
+              <!-- Product Name will be inserted here -->
+            </h3>
+            <p id="price_top4" class="mt-1 text-gray-500 text-sm">
+              <!-- Product Price will be inserted here -->
+            </p>
+          </div>
+      </div>
       </div>
       <!-- Product 5 -->
+      <div id="top5" class="bg-white shadow rounded overflow-hidden group" onclick="selectProduct('top5')">
       <div class="bg-white shadow rounded overflow-hidden group">
        <div class="bg-gray-200 relative">
         <div class="image-wrapper">
+            <div id="icon_sustainable_top5" class="sustainable-icon hidden">
+                  <i class="fas fa-leaf text-green-500"></i>
+            </div>
               <img src="{{ url_for('static', filename='images/top5.jpeg') }}"/>
           </div>
        </div>
        <div class="p-4 flex flex-col">
-        <h3 class="font-semibold text-lg leading-tight truncate">
-         Should-I La Casse Williams III Hoodie Nocturnal
-        </h3>
-        <p class="mt-1 text-gray-500 text-sm">
-         $225.00
-        </p>
-       </div>
+            <h3 id="name_top5" class="font-semibold text-lg leading-tight truncate">
+              <!-- Product Name will be inserted here -->
+            </h3>
+            <p id="price_top5" class="mt-1 text-gray-500 text-sm">
+              <!-- Product Price will be inserted here -->
+            </p>
+          </div>
+      </div>
       </div>
       <!-- Product 6 -->
+      <div id="top6" class="bg-white shadow rounded overflow-hidden group" onclick="selectProduct('top6')">
       <div class="bg-white shadow rounded overflow-hidden group">
        <div class="bg-gray-200 relative">
         <div class="image-wrapper">
+            <div id="icon_sustainable_top6" class="sustainable-icon hidden">
+                  <i class="fas fa-leaf text-green-500"></i>
+            </div>
               <img src="{{ url_for('static', filename='images/top6.jpeg') }}"/>
           </div>
        </div>
        <div class="p-4 flex flex-col">
-        <h3 class="font-semibold text-lg leading-tight truncate">
-         Should-I Logo Nelson Crewneck Light Heather Grey
-        </h3>
-        <p class="mt-1 text-gray-500 text-sm">
-         $175.00
-        </p>
-       </div>
+            <h3 id="name_top6" class="font-semibold text-lg leading-tight truncate">
+              <!-- Product Name will be inserted here -->
+            </h3>
+            <p id="price_top6" class="mt-1 text-gray-500 text-sm">
+              <!-- Product Price will be inserted here -->
+            </p>
+          </div>
       </div>
      </div>
+     </div>
      <div class="grid grid-cols-3 gap-6 mb-10">
-      <!-- Product 4 -->
+      <!-- Product 7 -->
+      <div id="top7" class="bg-white shadow rounded overflow-hidden group" onclick="selectProduct('top7')">
       <div class="bg-white shadow rounded overflow-hidden group">
        <div class="bg-gray-200 relative">
         <div class="image-wrapper">
+            <div id="icon_sustainable_top7" class="sustainable-icon hidden">
+                  <i class="fas fa-leaf text-green-500"></i>
+            </div>
               <img src="{{ url_for('static', filename='images/top7.jpeg') }}"/>
           </div>
        </div>
        <div class="p-4 flex flex-col">
-        <h3 class="font-semibold text-lg leading-tight truncate">
-         Should-I Gayac Williams III Hoodie Kindling
-        </h3>
-        <p class="mt-1 text-gray-500 text-sm">
-         $225.00
-        </p>
-       </div>
+            <h3 id="name_top7" class="font-semibold text-lg leading-tight truncate">
+              <!-- Product Name will be inserted here -->
+            </h3>
+            <p id="price_top7" class="mt-1 text-gray-500 text-sm">
+              <!-- Product Price will be inserted here -->
+            </p>
+          </div>
       </div>
-      <!-- Product 5 -->
+      </div>
+      <!-- Product 8 -->
+      <div id="top8" class="bg-white shadow rounded overflow-hidden group" onclick="selectProduct('top8')">
       <div class="bg-white shadow rounded overflow-hidden group">
        <div class="bg-gray-200 relative">
         <div class="image-wrapper">
+            <div id="icon_sustainable_top8" class="sustainable-icon hidden">
+                  <i class="fas fa-leaf text-green-500"></i>
+            </div>
               <img src="{{ url_for('static', filename='images/top8.jpeg') }}"/>
           </div>
        </div>
        <div class="p-4 flex flex-col">
-        <h3 class="font-semibold text-lg leading-tight truncate">
-         Should-I La Casse Williams III Hoodie Nocturnal
-        </h3>
-        <p class="mt-1 text-gray-500 text-sm">
-         $225.00
-        </p>
-       </div>
+            <h3 id="name_top8" class="font-semibold text-lg leading-tight truncate">
+              <!-- Product Name will be inserted here -->
+            </h3>
+            <p id="price_top8" class="mt-1 text-gray-500 text-sm">
+              <!-- Product Price will be inserted here -->
+            </p>
+          </div>
       </div>
-      <!-- Product 6 -->
+      </div>
+      <!-- Product 9 -->
+      <div id="top9" class="bg-white shadow rounded overflow-hidden group" onclick="selectProduct('top9')">
       <div class="bg-white shadow rounded overflow-hidden group">
        <div class="bg-gray-200 relative">
         <div class="image-wrapper">
+            <div id="icon_sustainable_top9" class="sustainable-icon hidden">
+                  <i class="fas fa-leaf text-green-500"></i>
+            </div>
               <img src="{{ url_for('static', filename='images/top9.jpeg') }}"/>
           </div>
        </div>
        <div class="p-4 flex flex-col">
-        <h3 class="font-semibold text-lg leading-tight truncate">
-         Should-I Logo Nelson Crewneck Light Heather Grey
-        </h3>
-        <p class="mt-1 text-gray-500 text-sm">
-         $175.00
-        </p>
-       </div>
+            <h3 id="name_top9" class="font-semibold text-lg leading-tight truncate">
+              <!-- Product Name will be inserted here -->
+            </h3>
+            <p id="price_top9" class="mt-1 text-gray-500 text-sm">
+              <!-- Product Price will be inserted here -->
+            </p>
+          </div>
       </div>
      </div>
+     </div>
      <div class="grid grid-cols-3 gap-6 mb-10">
-      <!-- Product 4 -->
+      <!-- Product 10 -->
+      <div id="bottom1" class="bg-white shadow rounded overflow-hidden group" onclick="selectProduct('bottom1')">
       <div class="bg-white shadow rounded overflow-hidden group">
        <div class="bg-gray-200 relative">
         <div class="image-wrapper">
-              <img src="{{ url_for('static', filename='images/bottom3.jpeg') }}"/>
-          </div>
-       </div>
-       <div class="p-4 flex flex-col">
-        <h3 class="font-semibold text-lg leading-tight truncate">
-         Should-I Gayac Williams III Hoodie Kindling
-        </h3>
-        <p class="mt-1 text-gray-500 text-sm">
-         $225.00
-        </p>
-       </div>
-      </div>
-      <!-- Product 5 -->
-      <div class="bg-white shadow rounded overflow-hidden group">
-       <div class="bg-gray-200 relative">
-        <div class="image-wrapper">
-              <img src="{{ url_for('static', filename='images/bottom2.jpeg') }}"/>
-          </div>
-       </div>
-       <div class="p-4 flex flex-col">
-        <h3 class="font-semibold text-lg leading-tight truncate">
-         Should-I La Casse Williams III Hoodie Nocturnal
-        </h3>
-        <p class="mt-1 text-gray-500 text-sm">
-         $225.00
-        </p>
-       </div>
-      </div>
-      <!-- Product 6 -->
-      <div class="bg-white shadow rounded overflow-hidden group">
-       <div class="bg-gray-200 relative">
-        <div class="image-wrapper">
+            <div id="icon_sustainable_bottom1" class="sustainable-icon hidden">
+                  <i class="fas fa-leaf text-green-500"></i>
+            </div>
               <img src="{{ url_for('static', filename='images/bottom1.jpeg') }}"/>
           </div>
        </div>
        <div class="p-4 flex flex-col">
-        <h3 class="font-semibold text-lg leading-tight truncate">
-         Should-I Logo Nelson Crewneck Light Heather Grey
-        </h3>
-        <p class="mt-1 text-gray-500 text-sm">
-         $175.00
-        </p>
+            <h3 id="name_bottom1" class="font-semibold text-lg leading-tight truncate">
+              <!-- Product Name will be inserted here -->
+            </h3>
+            <p id="price_bottom1" class="mt-1 text-gray-500 text-sm">
+              <!-- Product Price will be inserted here -->
+            </p>
+          </div>
+      </div>
+      </div>
+      <!-- Product 11 -->
+      <div id="bottom2" class="bg-white shadow rounded overflow-hidden group" onclick="selectProduct('bottom2')">
+      <div class="bg-white shadow rounded overflow-hidden group">
+       <div class="bg-gray-200 relative">
+        <div class="image-wrapper">
+            <div id="icon_sustainable_bottom2" class="sustainable-icon hidden">
+                  <i class="fas fa-leaf text-green-500"></i>
+            </div>
+              <img src="{{ url_for('static', filename='images/bottom2.jpeg') }}"/>
+          </div>
        </div>
+       <div class="p-4 flex flex-col">
+            <h3 id="name_bottom2" class="font-semibold text-lg leading-tight truncate">
+              <!-- Product Name will be inserted here -->
+            </h3>
+            <p id="price_bottom2" class="mt-1 text-gray-500 text-sm">
+              <!-- Product Price will be inserted here -->
+            </p>
+          </div>
+      </div>
+      </div>
+      <!-- Product 12 -->
+      <div id="bottom3" class="bg-white shadow rounded overflow-hidden group" onclick="selectProduct('bottom3')">
+      <div class="bg-white shadow rounded overflow-hidden group">
+       <div class="bg-gray-200 relative">
+        <div class="image-wrapper">
+            <div id="icon_sustainable_bottom3" class="sustainable-icon hidden">
+                  <i class="fas fa-leaf text-green-500"></i>
+            </div>
+              <img src="{{ url_for('static', filename='images/bottom3.jpeg') }}"/>
+          </div>
+       </div>
+       <div class="p-4 flex flex-col">
+            <h3 id="name_bottom3" class="font-semibold text-lg leading-tight truncate">
+              <!-- Product Name will be inserted here -->
+            </h3>
+            <p id="price_bottom3" class="mt-1 text-gray-500 text-sm">
+              <!-- Product Price will be inserted here -->
+            </p>
+          </div>
       </div>
      </div>
+     </div>
 </div>
+<script>
+function selectProduct(productId) {
+      localStorage.setItem('selectedProductId', productId);
+      window.location.href = "{{ url_for('item') }}";
+}
+const products = [
+    {
+        id: 'top1',
+        name: 'Green Recycled Cotton Tee',
+        description: 'A comfortable and stylish tee made from 100% recycled cotton',
+        price: 'US$ 29.99',
+        image_path: 'static/images/top1.jpeg',
+        sustainable: true,
+        type: 'top',
+    },
+    {
+        id: 'top2',
+        name: 'Purple Organic Linen Tee',
+        description: 'Purple tee made from 100% organic linen',
+        price: 'US$ 19.99',
+        image_path: 'static/images/top2.jpeg',
+        sustainable: true,
+        type: 'top',
+    },
+    {
+        id: 'top3',
+        name: 'Purple Organic Wool Sweater',
+        description: 'Stylish and comfy purple sweater made from pure organic wool',
+        price: 'US$ 49.99',
+        image_path: 'static/images/top3.jpeg',
+        sustainable: true,
+        type: 'top',
+    },
+    {
+        id: 'top4',
+        name: 'Orange Wool Sweater',
+        description: 'Orange Wool Sweater',
+        price: 'US$ 45.99',
+        image_path: 'static/images/top4.jpeg',
+        sustainable: false,
+        type: 'top',
+    },
+    {
+        id: 'top5',
+        name: 'Brown Recycled Cotton Tee',
+        description: '100% Organic Cotton',
+        price: 'US$ 24.99',
+        image_path: 'static/images/top5.jpeg',
+        sustainable: true,
+        type: 'top',
+    },
+    {
+        id: 'top6',
+        name: 'Plain White Cotton Tee',
+        description: '100% Organic Cotton',
+        price: 'US$ 19.99',
+        image_path: 'static/images/top6.jpeg',
+        sustainable: false,
+        type: 'top',
+    },
+    {
+        id: 'top7',
+        name: 'Plain Green Organic Cotton Tee',
+        description: '100% Organic Cotton',
+        price: 'US$ 24.99',
+        image_path: 'static/images/top7.jpeg',
+        sustainable: true,
+        type: 'top',
+    },
+    {
+        id: 'top8',
+        name: 'Plain Grey Organic Cotton Tee',
+        description: 'Plain Grey Organic Cotton Tee',
+        price: 'US$ 24.99',
+        image_path: 'static/images/top8.jpeg',
+        sustainable: true,
+        type: 'top',
+    },
+    {
+        id: 'top9',
+        name: 'Pink Organic Cotton Tee',
+        description: '100% Organic Cotton',
+        price: 'US$ 22.99',
+        image_path: 'static/images/top9.jpeg',
+        sustainable: true,
+        type: 'top',
+    },
+    {
+        id: 'bottom1',
+        name: 'Relaxed Washed Recycled Denim Jeans',
+        description: 'Sustainably sourced organic and recycled denim',
+        price: 'US$ 99.99',
+        image_path: 'static/images/bottom1.jpeg',
+        sustainable: true,
+        type: 'bottom',
+    },
+    {
+        id: 'bottom2',
+        name: 'Black Organic Cotton Shorts',
+        description: '100% Organic Cotton',
+        price: 'US$ 39.99',
+        image_path: 'static/images/bottom2.jpeg',
+        sustainable: true,
+        type: 'bottom',
+    },
+    {
+        id: 'bottom3',
+        name: 'Black Organic Cotton Shorts',
+        description: '100% Organic Cotton',
+        price: 'US$ 39.99',
+        image_path: 'static/images/bottom3.jpeg',
+        sustainable: true,
+        type: 'bottom',
+    },
+];
+document.addEventListener('DOMContentLoaded', () => {
+    products.forEach(product => {
+      const nameElement = document.getElementById(`name_${product.id}`);
+      const priceElement = document.getElementById(`price_${product.id}`);
+  
+      if (nameElement && priceElement) {
+        nameElement.textContent = product.name;
+        priceElement.textContent = product.price;
+      }
+    });
+  });
+products.forEach(product => {
+const nameElement = document.getElementById(`name_${product.id}`);
+const priceElement = document.getElementById(`price_${product.id}`);
+const iconElement = document.getElementById(`icon_sustainable_${product.id}`);
+
+if (nameElement && priceElement) {
+      nameElement.textContent = product.name;
+      priceElement.textContent = product.price;
+}
+if (product.sustainable && iconElement) {
+      iconElement.classList.remove('hidden');
+}
+});
+
+</script>
  </body>
 </html>
